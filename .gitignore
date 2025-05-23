@@ -1,0 +1,96 @@
+# Copy this content into your .gitignore file
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# Model Files (Large - can be rebuilt)
+models/*.ckpt
+models/*.bin
+models/*.safetensors
+models/*.pkl
+models/flan_t5/
+models/llama2/
+*.h5
+*.pth
+*.pt
+
+# FAISS Index Files (Can be rebuilt)
+models/faiss_index*
+models/metadata*.json
+
+# Data Files (Large PDFs)
+data/raw/*.pdf
+data/raw/*.docx
+data/raw/*.txt
+
+# HuggingFace Cache
+.cache/
+huggingface_hub/
+transformers_cache/
+.transformers_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+lightning_logs/
+tensorboard_logs/
+wandb/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+*.backup
+*.bak
+
+# Environment variables
+.env
+.env.local
+.env.production
+EOF
