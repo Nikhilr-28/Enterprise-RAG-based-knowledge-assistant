@@ -1,0 +1,26 @@
+﻿openai:
+  api_key: ${OPENAI_API_KEY}
+
+huggingface:
+  api_key: ${HF_API_KEY}
+
+paths:
+  data_raw: './data/raw'
+  data_processed: './data/processed'
+  faiss_index: './models/faiss_index'
+  llama2_ckpt: './models/llama2'
+  flan_t5_ckpt: './models/flan_t5'
+
+retrieval:
+  embedding_model: 'sentence-transformers/all-MiniLM-L6-v2'
+  top_k: 3
+
+fine_tuning:
+  llama2:
+    batch_size: 8
+    learning_rate: 5e-5
+    epochs: 3
+  flan_t5:
+    batch_size: 8
+    learning_rate: 3e-5
+    epochs: 3
